@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+    
+
+    @media (max-width: 768px){
+        font-size: 50%;
+    }
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.heading{
+    position: fixed;
+    width: 100vw;
+    padding: 1rem 2rem;
+    background-color: #393b44;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    &__menu{
+        display: none;
+        position: fixed;
+        top: 1.5rem;
+        right: 2rem;
+
+        @media (max-width: 768px){
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 3rem;
+            color: #000;
+        }
+
+    }
+    
+    
+    &__items{
+        display: flex;
+        position: fixed;
+        height: 12vh;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        background-color: #393b44;
+        @media(max-width: 768px){
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #8d93ab;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transform: scaleX(0);
+            transform-origin: left;
+            backface-visibility: hidden;
+        }
+    }
+    &__lists{
+        list-style: none;
+        padding-left: 5rem;
+        @media (max-width: 768px){
+            padding-left: 0;
+            padding-top: 5rem;
+        }
+    }
+    &__links{
+        text-decoration: none;
+        font-size: 2.5rem;
+        color: #eee;
+        transition: all .3s ease-in;
+
+        &:hover{
+            color: #fa1616;
+        }
+    }
+    &__close{
+        display: none;
+
+        @media (max-width: 768px){
+            display: inline-block;
+            position: absolute;
+            top: 2rem;
+            right:4rem;
+            font-size: 3rem;
+            color: #eeee;
+        }
+    }
+
+    &__menu:target + &__items{
+        transition: all .3s;
+        transform: scaleX(1);
+    }
+}
+.main{
+
+    height: 100vh;
+    background-color: #faf3dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+   &__currentDay{
+       font-size: 2rem;
+   }
+
+    &__table{
+        margin-top: 3rem;
+        border-collapse: collapse;
+        text-align: center;
+        width: 90%;
+        
+
+    }
+    &__heading{
+        font-size: 2rem;  
+        background-color: #28df99; 
+    }
+    &__data{
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    &__table,&__heading,&__data{
+        border: 1px solid #000;
+        text-align: center;
+    }
+    &__heading,&__data{
+        padding: 2rem;
+    }
+}
+
+.sunday{
+    background-color: #407088;
+}
+.monday{
+    background-color: #b0cac7;
+}
+.tuesday{
+    background-color: #2ec1ac;
+}
+.wednesday{
+    background-color: #776d8a;
+}
+.thursday{
+    background-color: #8d93ab;
+}
+.friday{
+    background-color: #16213e;
+    color: #ffff;
+    
+}
+.footer{
+    height: 30vh;
+    background-color: #393e46;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+
+
+    a{
+        text-decoration: none;
+        font-size: 2.5rem;
+        color: #eeee;
+        transition: all .3s ease-in;
+        @media (max-width: 768px){
+            font-size: 2rem;
+        }
+        &:hover{
+            color: red;
+        }
+    }
+    &__copyright{
+        color: #2fc4b2;
+        font-size: 2rem;
+        
+    }
+    
+}
+.time{
+    height: 100vh;
+    color: #000;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing: 3px;
+
+    &__day{
+        font-size: 2rem;
+        margin-bottom: 5rem;
+        padding: 2rem;
+    }
+    &__info{
+        font-size: 2rem;
+        padding: 2rem;
+    }
+    &__currentDay{
+        display: inline-block;
+        color: #f56a79;
+    }
+    &__currentTime{
+        display: inline-block;
+        color: #f0a500;
+    }
+}
