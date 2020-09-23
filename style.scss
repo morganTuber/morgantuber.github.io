@@ -1,3 +1,15 @@
+@keyframes upDown{
+    0%{
+        transform: translateY(-3rem)
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(3rem);
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +23,6 @@ html{
     font-size: 62.5%;
     box-sizing: inherit;
     scroll-behavior: smooth;
-    -webkit-scroll-behavior: smooth;
     
 
     @media (max-width: 768px){
@@ -32,19 +43,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    @media (max-width: 768px){
+        min-height: 5vh;
+    }
     
     &__menu{
         display: none;
         position: fixed;
         top: 1.5rem;
         right: 2rem;
+        cursor: pointer;
 
         @media (max-width: 768px){
-            width: 100%;
             display: flex;
             justify-content: flex-end;
-            font-size: 3rem;
+            font-size: 4rem;
             color: #000;
         }
 
@@ -54,7 +67,7 @@ body{
     &__items{
         display: flex;
         position: fixed;
-        height: 12vh;
+        height: 5vh;
         align-items: center;
         justify-content: center;
         z-index: 1000;
@@ -73,6 +86,7 @@ body{
             transform: scaleX(0);
             transform-origin: left;
             backface-visibility: hidden;
+            z-index: 10000000;
         }
     }
     &__lists{
@@ -215,6 +229,7 @@ body{
     &__info{
         font-size: 2rem;
         padding: 2rem;
+        
     }
     &__currentDay{
         display: inline-block;
@@ -223,5 +238,15 @@ body{
     &__currentTime{
         display: inline-block;
         color: #f0a500;
+    }
+    &__arrow{
+        position: absolute;
+        text-decoration: none;
+        font-size: 5rem;
+        color: #ea5455;
+        top: 80%;
+        animation: upDown 1s linear 0s infinite alternate;
+        animation-fill-mode: both;
+        z-index: -1;
     }
 }
