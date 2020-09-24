@@ -3,10 +3,10 @@ const currentDay = document.querySelector('.time__currentDay')
 function changeTime() {
     const time = new Date();
     const hour = time.getHours();
-    const amOrPm = (hour > 12) ? "PM" : "AM";
+    const amOrPm = (hour >= 12) ? "PM" : "AM";
     const minute = time.getMinutes();
     const second = time.getSeconds();
-    if(hour > 12){
+    if(hour >= 12){
         currentTime.innerHTML = `${Math.abs(hour - 12)} ${amOrPm} : ${minute}M : ${second}s`;
     }
     else{

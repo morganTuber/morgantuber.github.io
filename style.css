@@ -1,30 +1,30 @@
 @-webkit-keyframes upDown {
   0% {
-    -webkit-transform: translateY(-3rem);
-            transform: translateY(-3rem);
+    -webkit-transform: translateY(-1.5rem);
+            transform: translateY(-1.5rem);
   }
   50% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
   }
 }
 
 @keyframes upDown {
   0% {
-    -webkit-transform: translateY(-3rem);
-            transform: translateY(-3rem);
+    -webkit-transform: translateY(-1.5rem);
+            transform: translateY(-1.5rem);
   }
   50% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
   }
 }
 
@@ -62,7 +62,7 @@ body {
   width: 100vw;
   padding: 1rem 2rem;
   background-color: #393b44;
-  min-height: 10vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,28 +76,22 @@ body {
 
 @media (max-width: 768px) {
   .heading {
-    min-height: 5vh;
+    height: 8vh;
   }
 }
 
 .heading__menu {
   display: none;
   position: fixed;
-  top: 0rem;
   right: 2rem;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .heading__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    font-size: 7rem;
-    color: #000;
+    display: inline-block;
+    font-size: 8rem;
+    color: #eee;
   }
 }
 
@@ -338,13 +332,13 @@ body {
 }
 
 .time__day {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 5rem;
   padding: 2rem;
 }
 
 .time__info {
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 2rem;
 }
 
@@ -364,8 +358,8 @@ body {
   font-size: 5rem;
   color: #ea5455;
   top: 80%;
-  -webkit-animation: upDown 1s linear 0s infinite alternate;
-          animation: upDown 1s linear 0s infinite alternate;
+  -webkit-animation: upDown .8s linear 0s infinite alternate;
+          animation: upDown .8s linear 0s infinite alternate;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   z-index: -1;
