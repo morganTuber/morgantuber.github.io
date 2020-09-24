@@ -49,7 +49,7 @@ html {
 
 @media (max-width: 768px) {
   html {
-    font-size: 50%;
+    font-size: 45%;
   }
 }
 
@@ -214,7 +214,10 @@ body {
 }
 
 .main__currentDay {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
 }
 
 .main__table {
@@ -241,6 +244,12 @@ body {
 
 .main__heading, .main__data {
   padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .main__heading, .main__data {
+    padding: 1.5rem;
+  }
 }
 
 .sunday {

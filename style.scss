@@ -26,7 +26,7 @@ html{
     
 
     @media (max-width: 768px){
-        font-size: 50%;
+        font-size: 45%;
     }
 }
 body{
@@ -135,7 +135,10 @@ body{
     flex-direction: column;
     overflow-x: hidden;
    &__currentDay{
-       font-size: 2rem;
+       font-size: 3rem;
+       font-weight: bolder;
+       margin-bottom: 3rem;
+       text-transform: uppercase;
    }
 
     &__table{
@@ -160,6 +163,10 @@ body{
     }
     &__heading,&__data{
         padding: 2rem;
+
+        @media (max-width: 768px) {
+            padding: 1.5rem;
+        }
     }
 }
 
