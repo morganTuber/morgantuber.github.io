@@ -50,14 +50,14 @@ body{
     &__menu{
         display: none;
         position: fixed;
-        top: 1.5rem;
+        top: 0rem;
         right: 2rem;
         cursor: pointer;
 
         @media (max-width: 768px){
             display: flex;
             justify-content: flex-end;
-            font-size: 4rem;
+            font-size: 7rem;
             color: #000;
         }
 
