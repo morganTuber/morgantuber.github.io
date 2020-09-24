@@ -28,6 +28,9 @@ html{
     @media (max-width: 768px){
         font-size: 45%;
     }
+    @media (max-width: 300px){
+        font-size: 30%;
+    }
 }
 body{
     font-family: 'Montserrat', sans-serif;

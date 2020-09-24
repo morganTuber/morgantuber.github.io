@@ -53,6 +53,12 @@ html {
   }
 }
 
+@media (max-width: 300px) {
+  html {
+    font-size: 30%;
+  }
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
