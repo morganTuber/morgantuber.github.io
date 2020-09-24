@@ -6,7 +6,13 @@ function changeTime() {
     const amOrPm = (hour > 12) ? "PM" : "AM";
     const minute = time.getMinutes();
     const second = time.getSeconds();
-    currentTime.innerHTML = `${Math.abs(hour - 12)} ${amOrPm} : ${minute}M : ${second}s`;
+    if(hour > 12){
+        currentTime.innerHTML = `${Math.abs(hour - 12)} ${amOrPm} : ${minute}M : ${second}s`;
+    }
+    else{
+        currentTime.innerHTML = `${hour} ${amOrPm} : ${minute}M : ${second}s`;
+    }
+    
 }
 function changeDay() {
     const time = new Date().getDay();
