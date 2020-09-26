@@ -35,6 +35,9 @@ function changeDay() {
         case 5:
             currentDay.innerHTML = 'Friday';
             break;
+        case 6:
+            currentDay.innerHTML = 'Saturday';
+            break;
         default:
             console.log("Saturday");
     }
