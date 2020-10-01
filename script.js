@@ -42,5 +42,7 @@ function changeDay() {
             console.log("Saturday");
     }
 }
-setInterval(changeDay,1000);
-setInterval(changeTime, 1000);
+changeTime();
+changeDay();
+// setInterval(changeDay,1000);
+// setInterval(changeTime, 1000);
