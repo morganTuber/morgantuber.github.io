@@ -43,5 +43,9 @@ function changeDay() {
     }
 }
 
-setInterval(changeDay,1000);
-setInterval(changeTime, 1000);
+// setInterval(changeDay,1000);
+// setInterval(changeTime, 1000);
+setInterval(() =>{
+    changeDay();
+    changeTime();
+},1000)
